@@ -1,1 +1,28 @@
+# Verificar contas sem senha
+sudo awk -F: '($2 == "") {print}' /etc/shadow
 
+# Verificar logs
+sudo cat /var/log/auth.log | grep "Failed password"
+4. **"Commit new file"**
+
+---
+
+### 4. Criar arquivo `.gitignore`:
+
+1. **"Add file"** → **"Create new file"**
+2. Nome: `.gitignore`
+3. Cole:
+```gitignore
+# Arquivos temporários
+*.pyc
+__pycache__/
+*.log
+*.tmp
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Credenciais
+*.key
+*.pem
