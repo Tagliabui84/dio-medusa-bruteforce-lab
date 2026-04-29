@@ -1,1 +1,7 @@
-
+msfadmin
+admin
+root
+user
+ftp
+kali
+teste
